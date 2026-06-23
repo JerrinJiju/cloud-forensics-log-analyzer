@@ -43,7 +43,6 @@ The project aims to simplify cloud investigations by automating log analysis and
 
 ### Security
 - SHA-256 Hashing
-- bcrypt Authentication
 
 ### Cloud & APIs
 - AWS SDK (Boto3)
@@ -103,29 +102,7 @@ Cloud-Forensics-Log-Analyzer/
 
 ---
 
-## Screenshots
 
-### Login Page
-
-Add screenshot here
-
-### Dashboard
-
-Add screenshot here
-
-### Log Analysis
-
-Add screenshot here
-
-### Alert Management
-
-Add screenshot here
-
-### Forensic Report
-
-Add screenshot here
-
----
 
 ## Installation
 
@@ -185,10 +162,10 @@ This project was developed as part of the B.Sc Cyber Forensics program at Jai Bh
 
 ## Author
 
-Your Name
+Jerrin Jiju
 
 Cyber Forensics Student
 
-GitHub: https://github.com/yourusername
+GitHub: https://github.com/jerrinjiju
 
-LinkedIn: Add Your LinkedIn Profile
+LinkedIn: https://www.linkedin.com/in/jerrin-jiju-71bb74370
