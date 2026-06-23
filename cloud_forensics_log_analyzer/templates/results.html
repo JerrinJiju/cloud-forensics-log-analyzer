@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2 style="text-align:center;">Analysis Results</h2>
+
+    {% if report %}
+        <p style="text-align:center;">Suspicious activity found in <b>{{ filename }}</b>:</p>
+        <table border="1" style="margin:auto; width:80%; border-collapse: collapse; text-align:center;">
+            <tr>
+                <th>Activity</th>
+                <th>Occurrences</th>
+                <th>Suggested Solution</th>
+                <th>Examples</th>
+            </tr>
+            {% for keyword, data in report.items() %}
+            <tr>
+                <td>{{ keyword }}</td>
+                <td>{{ data.count }}</td>
+                <td>{{ data.solution }}</td>
+                <td>
+                    <ul>
+                        {% for example in data.examples %}
+                            <li>{{ example }}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <br>
+        <a href="{{ url_for('download_report') }}"><button>Download Report (PDF)</button></a>
+    {% else %}
+        <p>No suspicious activity detected.</p>
+    {% endif %}
+
+    <br>
+    <a href="{{ url_for('upload') }}"><button>Upload Another File</button></a>
+{% endblock %}

